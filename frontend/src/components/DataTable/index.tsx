@@ -13,13 +13,13 @@ const DataTable = () => {
         last: true,
         number: 0,
         totalElements: 0,
-        totalPages: 0,
+        totalPages: 0
     });
 
     useEffect(() => {
         axios.get(`${BASE_URL}/sales?page=${activePage}&size=20&sort=date,desc`)
             .then(response => {
-                setPage(response.data)
+                setPage(response.data);
             });
     }, [activePage]);
 
